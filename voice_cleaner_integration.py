@@ -1,3 +1,11 @@
+from fastapi import FastAPI
+app = FastAPI()
+
+@app.get("/")
+def health_check():
+    return {"status": "ok"}
+
+# Your cleaning logic endpoints
 #!/usr/bin/env python3
 """
 Voice Cleaner Integration with AI Orchestration System
