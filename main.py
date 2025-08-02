@@ -1,5 +1,5 @@
-from fastapi import FastAPI
-from voice_cleaner_integration import clean_voice  # Assuming this exists
+from fastapi import FastAPI, UploadFile, File
+from voice_cleaner_integration import clean_voice
 
 app = FastAPI()
 
@@ -8,7 +8,8 @@ def root():
     return {"message": "Voice Cleaner API is live"}
 
 @app.post("/clean")
-def clean_audio():
-    # Replace this with actual logic from `voice_cleaner_integration.py`
-    result = clean_voice()
+async def clean_audio(file: UploadFile = File(...)):
+    audio_bytes = await file.read()
+    result = clean_voice(audio_bytes)
     return {"result": result}
+
