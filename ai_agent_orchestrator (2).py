@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""
+""
 Complete AI Agent Orchestrator
 Uses Google AI Platform APIs to automatically manage, fix, and orchestrate all backend services
-"""
+""
 
 import asyncio
 import json
@@ -15,10 +15,10 @@ from google.cloud import resourcemanager, serviceusage
 import requests
 import logging
 #!/usr/bin/env python3
-"""
+""
 Complete AI Agent Orchestrator
 Uses Google AI Platform APIs to automatically manage, fix, and orchestrate all backend services
-"""
+""
 
 import asyncio
 import json
@@ -99,7 +99,7 @@ class GoogleAIAgentOrchestrator:
         print("🤖 AI Agent Orchestrator initialized with 6 specialized agents")
 
     async def initialize_agent_ecosystem(self):
-        """Initialize the complete AI agent ecosystem"""
+        ""Initialize the complete AI agent ecosystem""
         print("🚀 Initializing AI Agent Ecosystem...")
         
         # Step 1: Enable all required Google APIs automatically
